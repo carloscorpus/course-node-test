@@ -19,7 +19,7 @@ export class Server {
     async start() {
         this.app.use(express.static(this.public_path));
 
-        this.app.get('*test', (req, res) => {
+        this.app.get('/{*splat}', (req, res) => {
             const indexPath = path.join(process.cwd(), this.public_path, 'index.html');
             res.sendFile(indexPath);
             return;
