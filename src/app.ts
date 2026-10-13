@@ -1,13 +1,14 @@
 import { Server } from './presentation/index.js';
-// !! test 2
+import { envs } from './config/envs.js';
+
 (() => {
     main();
 })();
 
 function main() {
     const server = new Server({
-        port: 3000,
-        public_path: 'public',
+        port: envs.PORT,
+        public_path: envs.PUBLIC_PATH,
     });
     server.start();
 }
