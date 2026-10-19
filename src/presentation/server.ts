@@ -10,6 +10,7 @@ export class Server {
     private app = express();
     private readonly port: number;
     private readonly public_path: string;
+
     constructor(option: Options) {
         const { port, public_path = 'public' } = option;
         this.port = port;
@@ -25,8 +26,8 @@ export class Server {
             return;
         });
 
-        this.app.listen(this.port, '0.0.0.0', () => {
-            console.log('server running ', this.port);
+        this.app.listen(this.port, () => {
+            console.log('server running Web Service', this.port);
         });
     }
 }
