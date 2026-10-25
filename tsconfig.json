@@ -8,8 +8,8 @@
 
         // Environment Settings
         // See also https://aka.ms/tsconfig/module
-        "module": "esnext",
-        "moduleResolution": "bundler",
+        "module": "NodeNext",
+        "moduleResolution": "NodeNext",
         "esModuleInterop": true,
         "ignoreDeprecations": "6.0",
         "target": "es2023",
