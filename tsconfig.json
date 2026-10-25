@@ -1,5 +1,6 @@
 {
     // Visit https://aka.ms/tsconfig to read more about this file
+    "include": ["src"],
     "compilerOptions": {
         // File Layout
         "rootDir": "src",
@@ -7,8 +8,11 @@
 
         // Environment Settings
         // See also https://aka.ms/tsconfig/module
-        "module": "nodenext",
-        "target": "esnext",
+        "module": "esnext",
+        "moduleResolution": "bundler",
+        "esModuleInterop": true,
+        "ignoreDeprecations": "6.0",
+        "target": "es2023",
         "types": ["node"],
         // For nodejs:
         // "lib": ["esnext"],
